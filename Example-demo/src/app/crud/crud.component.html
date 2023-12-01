@@ -1,0 +1,62 @@
+<div class="layout-main">
+  <div class="list card">
+    <h2>User list</h2>
+    <table>
+      <tr>
+        <th class="text-center">ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let user of users" (click)="selectedUser(user)">
+        <td class="text-center">{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.location }}</td>
+
+        <td>
+          <button (click)="onDeleteUser(user.id)" class="btn-delete p-button">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="create card">
+    <div class="flex title">
+      <h2>Create | Update - User information</h2>
+      <button (click)="onRefresh()" class="btn-refresh p-button">
+        Refresh
+      </button>
+    </div>
+
+    <div class="description text-center">
+      <p>*** Refresh to create a new user ***</p>
+      <p>*** Select the user on the list to update user information ***</p>
+    </div>
+
+    <form [formGroup]="formCreateUser" (ngSubmit)="formSubmits.next(true)">
+      <div class="w-full flex gap-3 field">
+        <label for="name" class="w-3">Name</label>
+        <input type="text" class="w-7" formControlName="name" />
+      </div>
+
+      <div class="w-full flex gap-3 field">
+        <label for="location" class="w-3">Location</label>
+        <input type="text" class="w-7" formControlName="location" />
+      </div>
+
+      <div class="flex justify-content-center">
+        <button
+          class="p-button"
+          type="submit"
+          [disabled]="formCreateUser.invalid"
+        >
+          Save
+        </button>
+      </div>
+
+      <pre>from create value: {{ formCreateUser.value | json }}</pre>
+    </form>
+  </div>
+</div>

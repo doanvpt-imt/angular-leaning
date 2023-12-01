@@ -1,0 +1,29 @@
+button {
+  background-color: #16cc9b;
+  border: 10px solid #16cc9b;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.25s linear;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #71f3c8, 0 1px 2px 0 black !important;
+  }
+}
+
+button::after {
+  position: relative;
+  right: 0;
+  transition: all 0.15s linear;
+}
+
+button:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.mx-2 {
+  margin: 10px;
+}

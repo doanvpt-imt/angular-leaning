@@ -1,0 +1,33 @@
+<nav>
+  <a
+    routerLink="/home"
+    routerLinkActive="selected"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Home
+  </a>
+
+  <a [routerLink]="['/about']" routerLinkActive="selected">About</a>
+
+  <a
+    [routerLink]="['/product']"
+    routerLinkActive="selected"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Product
+  </a>
+
+  <a [routerLink]="['/cart']" routerLinkActive="selected">Cart</a>
+
+  <a [routerLink]="['/sign-in-rf']" routerLinkActive="selected">Sign-in-rf</a>
+
+  <a [routerLink]="['/sign-in']" routerLinkActive="selected">Sign-in</a>
+
+  <a [routerLink]="['/register']" routerLinkActive="selected">Register</a>
+
+  <a [routerLink]="['/form']" routerLinkActive="selected">Form</a>
+
+  <a [routerLink]="['/crud']" routerLinkActive="selected">CRUD</a>
+</nav>
+
+<router-outlet></router-outlet>

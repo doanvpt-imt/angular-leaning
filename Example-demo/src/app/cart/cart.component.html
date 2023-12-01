@@ -1,0 +1,19 @@
+<div>abcxfdf</div>
+
+<main>
+  <app-header [totalProducts]="products.length">Shopping Cart</app-header>
+
+  <div *ngIf="!products.length" class="cart-empty">Cart Empty</div>
+
+  <section class="container">
+    <app-body
+      [products]="products"
+      (onRemoveProduct)="onRemoveProduct($event)"
+      (onChangeProductQuantity)="onChangeProductQuantity($event)"
+    />
+  </section>
+
+  <section class="container" *ngIf="products.length">
+    <app-footer [total]="total" />
+  </section>
+</main>

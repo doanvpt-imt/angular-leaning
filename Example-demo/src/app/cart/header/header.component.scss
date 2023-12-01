@@ -1,0 +1,41 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+header.container {
+  margin-bottom: 1.5rem;
+}
+
+header .breadcrumb {
+  color: #7d7d7d;
+}
+
+header .breadcrumb li {
+  float: left;
+  padding: 0 6px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: #db5151;
+  }
+}
+
+header .breadcrumb li:first-child {
+  padding-left: 2px;
+}
+
+header .breadcrumb li:not(:last-child)::after {
+  content: " \276f";
+  padding-left: 8px;
+}
+
+header .count {
+  float: right;
+  color: #333333;
+  height: 20px;
+  line-height: 20px;
+}

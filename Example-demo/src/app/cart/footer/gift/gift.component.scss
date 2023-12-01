@@ -1,0 +1,78 @@
+.promotion {
+  float: left;
+  width: 100%;
+  margin-top: 1.5rem;
+
+  > label {
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  > input {
+    float: left;
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.5rem 0 0.5rem 1.8rem;
+    border: 2px solid #16cc9b;
+    border-radius: 2rem 0 0 2rem;
+
+    &:focus {
+      box-shadow: 0 0 4px 0.2px #16cc9b;
+      border: 2px solid #16cc9b !important;
+    }
+
+    &:hover {
+      border: 2px solid #f58551;
+    }
+  }
+
+  > button {
+    float: left;
+    width: 20%;
+    height: 2.4rem;
+    border-radius: 0 2rem 2rem 0;
+
+    &:hover {
+      border-color: #f58551;
+      background-color: #f58551;
+    }
+
+    &::after {
+      content: "\276f";
+      font-size: 1rem;
+    }
+  }
+}
+
+button {
+  background-color: #16cc9b;
+  border: 2px solid #16cc9b;
+  color: #ffffff;
+  transition: all 0.25s linear;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #71f3c8, 0 1px 2px 0 black !important;
+  }
+}
+
+button::after {
+  position: relative;
+  right: 0;
+  content: " \276f";
+  transition: all 0.15s linear;
+}
+
+button:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+@media all and (min-width: 600px) {
+  .promotion {
+    width: 50%;
+  }
+}

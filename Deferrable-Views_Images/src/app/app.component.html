@@ -1,0 +1,80 @@
+<!-- @defer {
+<large-component />
+} @placeholder (minimum 500ms) {
+<p>Placeholder content</p>
+} @loading (after 10000ms; minimum 1s) {
+<img alt="loading..." src="../favicon.ico" />
+} @error {
+<p>Failed to load the calendar</p>
+}  -->
+
+<!-- @defer (on viewport; on timer(5s)) {
+<large-component />
+} @placeholder {
+<img src="../favicon.ico" />
+}  -->
+
+<!-- @defer (when true) {
+<large-component />
+}  -->
+
+<!-- @defer (on viewport; when true) {
+<large-component />
+} @placeholder {
+<img src="../favicon.ico" />
+}  -->
+
+<!-- @defer (on viewport) {
+<large-component />
+} @placeholder {
+<div>Calendar placeholder</div>
+} -->
+
+<!-- <div #greeting>Hello!</div>
+@defer (on viewport(greeting)) {
+<large-component />
+}  -->
+
+<!-- @defer (on interaction) {
+<large-component />
+} @placeholder {
+<div>Calendar placeholder</div>
+} -->
+
+<!-- <button type="button" #greeting>Hello!</button>
+@defer (on interaction(greeting)) {
+<large-component />
+} @placeholder {
+<div>Calendar placeholder</div>
+}  -->
+
+<!-- @defer (on hover) {
+<large-component />
+} @placeholder {
+<div>Calendar placeholder</div>
+} -->
+
+<!-- <div #greeting>Hello!</div>
+@defer (on hover(greeting)) {
+<large-component />
+} @placeholder {
+<div>Calendar placeholder</div>
+}  -->
+
+<!-- @defer (on immediate) {
+<large-component />
+} @placeholder {
+<div>Calendar placeholder</div>
+} -->
+
+<!-- @defer (on timer(500ms)) {
+<large-component />
+}  -->
+
+@defer (on interaction; prefetch on idle) {
+<large-component />
+} @placeholder {
+<img src="../favicon.ico" />
+}
+
+<router-outlet></router-outlet>

@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "roy",
+      "location": "india"
+    },
+    {
+      "id": 2,
+      "name": "sam",
+      "location": "wales"
+    },
+    {
+      "id": 6,
+      "name": "Tấn Đoan",
+      "location": "Hồ Chí Minh"
+    },
+    {
+      "id": 7,
+      "name": "Đoan Võ",
+      "location": "Phú Yên"
+    },
+    {
+      "id": 9,
+      "name": "fsdfds",
+      "location": "fsfds"
+    },
+    {
+      "id": 10,
+      "name": "fsdfdssdfsdf",
+      "location": "ffdsfdfsdfsdf"
+    }
+  ]
+}

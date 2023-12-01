@@ -1,0 +1,146 @@
+a {
+  text-decoration: none;
+  color: #333333;
+
+  &:hover {
+    color: #f58551;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.products {
+  border-top: 1px solid #ddd;
+
+  > li {
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.row {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.col {
+  float: left;
+
+  &.left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.detail {
+  padding: 0 0.5rem;
+  line-height: 2.2rem;
+
+  &.name {
+    font-size: 1.2rem;
+  }
+
+  &.description {
+    color: #7d7d7d;
+    font-size: 1rem;
+  }
+
+  &.price {
+    font-size: 1.5rem;
+  }
+}
+
+.remove {
+  float: left;
+  width: 50%;
+  text-align: center;
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.quantity {
+  float: left;
+  width: 50%;
+  text-align: center;
+
+  > input {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    border-radius: 5px;
+  }
+}
+
+.close {
+  fill: #7d7d7d;
+  transition: color 150ms linear, background-color 150ms linear,
+    fill 150ms linear, 150ms opacity linear;
+  cursor: pointer;
+
+  &:hover {
+    fill: #f58551;
+  }
+}
+
+@media all and (max-width: 599px) {
+  .thumbnail img {
+    display: none;
+  }
+
+  .quantity > input {
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+  }
+
+  .remove svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .thumbnail,
+  .detail {
+    float: left;
+  }
+
+  .thumbnail {
+    width: 35%;
+  }
+
+  .detail {
+    width: 65%;
+  }
+}

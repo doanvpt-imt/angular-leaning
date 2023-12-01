@@ -1,0 +1,27 @@
+.container2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  .mt-3 {
+    margin-top: 10px;
+  }
+
+  .ml-3 {
+    margin-left: 10px;
+  }
+}

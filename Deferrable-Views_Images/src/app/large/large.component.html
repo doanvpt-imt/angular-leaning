@@ -1,0 +1,23 @@
+<p>large works!</p>
+<img ngSrc="cat.jpg" />
+<img ngSrc="cat.jpg" width="400" height="200" priority />
+<img ngSrc="cat.jpg" width="400" height="200" />
+<img ngSrc="cat.jpg" fill />
+<link rel="preconnect" href="https://my.cdn.origin" />
+<img ngSrc="hero.jpg" ngSrcset="100w, 200w, 300w" />
+<img ngSrc="hero.jpg" ngSrcset="100w, 200w, 300w" sizes="50vw" />
+<img ngSrc="about.jpg" disableOptimizedSrcset />
+<img ngSrc="cat.jpg" width="400" height="200" loading="eager" />
+<img
+  ngSrc="cat.jpg"
+  width="400"
+  height="200"
+  sizes="(max-width: 768px) 100vw, 50vw"
+/>
+
+<img
+  ngSrc="profile.jpg"
+  width="300"
+  height="300"
+  [loaderParams]="{ roundedCorners: true }"
+/>

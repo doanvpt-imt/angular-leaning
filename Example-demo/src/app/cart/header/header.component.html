@@ -1,0 +1,14 @@
+<header class="container">
+  <h1>
+    <ng-content />
+  </h1>
+
+  <ul class="breadcrumb">
+    <li [routerLink]="['']">Home</li>
+    <li>Shopping cart</li>
+  </ul>
+
+  <span class="count" *ngIf="totalProducts">
+    {{ totalProducts }} item in the bag
+  </span>
+</header>

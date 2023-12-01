@@ -1,0 +1,32 @@
+<div class="container2">
+  <form
+    [formGroup]="FormData"
+    role="form"
+    (ngSubmit)="onSubmit(FormData.value)"
+  >
+    <div class="flex">
+      <span>Order Form</span>
+
+      <button (click)="addItem()" type="button">Add item</button>
+    </div>
+
+    <div class="item" *ngFor="let quantity of getQuantities(); let i = index">
+      <label for="">Item quantity {{ i }}</label>
+      <div class="add--items">
+        <input
+          type="text"
+          [formControl]="$any(quantity)"
+          placeholder="Add quantity"
+          numbersOnly
+        />
+        <button class="ml-3" type="button" (click)="deleteItem(i)">
+          Delete
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
