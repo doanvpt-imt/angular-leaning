@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
-import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientJsonpModule,
+  HttpClientModule,
+} from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,6 +18,12 @@ import { AppComponent } from './app.component';
 import { ConfigComponent } from './config/config.component';
 import { CRUDComponent } from './crud/crud.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [AppComponent, ...COMPONENT, ConfigComponent, CRUDComponent],
@@ -31,6 +41,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

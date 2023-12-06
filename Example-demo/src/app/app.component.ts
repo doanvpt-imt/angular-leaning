@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
+
   minutes = 0;
   gender = 'female';
   fly = true;

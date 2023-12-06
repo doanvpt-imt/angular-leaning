@@ -24,7 +24,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "localize": ["es-PR"],
-            "outputPath": "dist/internationalization",
+            "outputPath": "dist/angular-lang",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
