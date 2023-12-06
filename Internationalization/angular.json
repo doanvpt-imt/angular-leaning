@@ -3,18 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-shopping-cart": {
+    "Internationalization": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es-PR": "src/locale/messages.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        }
-      },
-      "i18n": {
-        "sourceLocale": "en",
-        "locales": {
-          "fr": "src/assets/i18n/fr.json",
-          "es": "src/assets/i18n/en.json"
         }
       },
       "root": "",
@@ -22,11 +21,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-shopping-cart",
+            "localize": ["es-PR"],
+            "outputPath": "dist/internationalization",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -51,12 +51,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -65,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-shopping-cart:build:production"
+              "buildTarget": "Internationalization:build:production"
             },
             "development": {
-              "browserTarget": "angular-shopping-cart:build:development"
+              "buildTarget": "Internationalization:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-shopping-cart:build"
+            "buildTarget": "Internationalization:build"
           }
         },
         "test": {

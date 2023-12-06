@@ -1,0 +1,61 @@
+main {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+
+  .img-container {
+    max-width: 300px;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .hero-image {
+      width: 100%;
+    }
+  }
+
+  .shipping-details {
+    .shipping-icon {
+      max-width: 50px;
+      max-height: 50px;
+    }
+
+    table,
+    th,
+    td {
+      min-width: 100px;
+      border-collapse: collapse;
+      text-align: left;
+      border-width: 0 0 1px 0;
+      padding: 1rem 1rem;
+    }
+    table {
+      border: 1px solid #383838;
+      th {
+        border: 1px solid #383838;
+
+        &.text-center {
+          text-align: center;
+        }
+      }
+      td {
+        cursor: pointer;
+        border: 1px solid #383838;
+
+        &.text-center {
+          text-align: center;
+        }
+      }
+
+      .total-amount-lable {
+        font-weight: 700;
+      }
+      .total-amount {
+        font-weight: 700;
+      }
+    }
+  }
+}

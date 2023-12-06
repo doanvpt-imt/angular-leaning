@@ -1,0 +1,46 @@
+<main>
+  <section class="img-container">
+    <img src="../assets/images/cat.jpg" class="hero-image" />
+  </section>
+
+  <section class="shipping-details">
+    <h2 i18n>
+      Your order is on its way!
+      <img
+        atl="shipping icon"
+        i18n-alt
+        src="../assets/images/cat.jpg"
+        class="shipping-icon"
+      />
+    </h2>
+
+    <p i18n>
+      Thank you for shopping with us and your order has been processed.
+    </p>
+
+    <table>
+      <tr>
+        <th i18n>Item</th>
+        <th i18n>Qty</th>
+        <th i18n>Date</th>
+        <th i18n>Amount</th>
+      </tr>
+
+      <tr>
+        <td>Big box item</td>
+        <td>1</td>
+        <td>{{ "05/01/2023" | date }}</td>
+        <td>{{ 129 | currency }}</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td i18n class="total-amount-lable">Total Amount</td>
+        <td class="total-amount">{{ 129 | currency }}</td>
+      </tr>
+    </table>
+  </section>
+</main>
+
+<router-outlet></router-outlet>
